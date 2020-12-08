@@ -1,0 +1,16 @@
+name: n
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+
+jobs:
+  n:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wabarc/distributor@v0.1.0
+        name: o
+        env:
+          DISTRIBUTE_TOKEN: ${{ github.token }}
+          DISTRIBUTE_CHANNEL: ${{ secrets.DISTRIBUTE_CHANNEL }}
